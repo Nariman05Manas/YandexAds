@@ -13,6 +13,9 @@
 		4B9BFD142CEEA4A7007E53AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9BFD122CEEA4A7007E53AC /* Main.storyboard */; };
 		4B9BFD162CEEA4A9007E53AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B9BFD152CEEA4A9007E53AC /* Assets.xcassets */; };
 		4B9BFD192CEEA4A9007E53AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9BFD172CEEA4A9007E53AC /* LaunchScreen.storyboard */; };
+		4B9BFD222CEEA592007E53AC /* YandexMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 4B9BFD212CEEA592007E53AC /* YandexMobileAds */; };
+		4B9BFD242CEEA592007E53AC /* YandexMobileAdsInstream in Frameworks */ = {isa = PBXBuildFile; productRef = 4B9BFD232CEEA592007E53AC /* YandexMobileAdsInstream */; };
+		4B9BFD262CEEA653007E53AC /* MobileAdsBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4B9BFD252CEEA653007E53AC /* MobileAdsBundle.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,7 @@
 		4B9BFD152CEEA4A9007E53AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B9BFD182CEEA4A9007E53AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B9BFD1A2CEEA4A9007E53AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B9BFD252CEEA653007E53AC /* MobileAdsBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MobileAdsBundle.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B9BFD222CEEA592007E53AC /* YandexMobileAds in Frameworks */,
+				4B9BFD242CEEA592007E53AC /* YandexMobileAdsInstream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,7 @@
 		4B9BFD002CEEA4A7007E53AC = {
 			isa = PBXGroup;
 			children = (
+				4B9BFD252CEEA653007E53AC /* MobileAdsBundle.bundle */,
 				4B9BFD0B2CEEA4A7007E53AC /* MobileAds */,
 				4B9BFD0A2CEEA4A7007E53AC /* Products */,
 			);
@@ -83,6 +90,10 @@
 			dependencies = (
 			);
 			name = MobileAds;
+			packageProductDependencies = (
+				4B9BFD212CEEA592007E53AC /* YandexMobileAds */,
+				4B9BFD232CEEA592007E53AC /* YandexMobileAdsInstream */,
+			);
 			productName = MobileAds;
 			productReference = 4B9BFD092CEEA4A7007E53AC /* MobileAds.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 4B9BFD002CEEA4A7007E53AC;
+			packageReferences = (
+				4B9BFD202CEEA592007E53AC /* XCRemoteSwiftPackageReference "yandex-ads-sdk-ios" */,
+			);
 			productRefGroup = 4B9BFD0A2CEEA4A7007E53AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B9BFD262CEEA653007E53AC /* MobileAdsBundle.bundle in Resources */,
 				4B9BFD192CEEA4A9007E53AC /* LaunchScreen.storyboard in Resources */,
 				4B9BFD162CEEA4A9007E53AC /* Assets.xcassets in Resources */,
 				4B9BFD142CEEA4A7007E53AC /* Main.storyboard in Resources */,
@@ -223,6 +238,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -279,6 +295,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -300,6 +317,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +325,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-18Nariman.MobileAds";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -328,6 +349,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,6 +357,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-18Nariman.MobileAds";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -363,6 +388,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4B9BFD202CEEA592007E53AC /* XCRemoteSwiftPackageReference "yandex-ads-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yandexmobile/yandex-ads-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B9BFD212CEEA592007E53AC /* YandexMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B9BFD202CEEA592007E53AC /* XCRemoteSwiftPackageReference "yandex-ads-sdk-ios" */;
+			productName = YandexMobileAds;
+		};
+		4B9BFD232CEEA592007E53AC /* YandexMobileAdsInstream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B9BFD202CEEA592007E53AC /* XCRemoteSwiftPackageReference "yandex-ads-sdk-ios" */;
+			productName = YandexMobileAdsInstream;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4B9BFD012CEEA4A7007E53AC /* Project object */;
 }
